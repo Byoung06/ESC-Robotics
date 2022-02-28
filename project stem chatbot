@@ -1,0 +1,27 @@
+#this code is for a "chatbot" made in project stem and coded using python
+import random
+fname = input("What is your first name?\n")
+lname = input("What is your last name?\n")
+print("Hi there, " + fname + " " + lname + ", nice to meet you!\n\n")
+age = int(input("How old are you?\n"))
+print(str(age) + " is a good age.")
+if(age >= 16):
+    print("you are old enough to drive.")
+elif(age < 16):
+    print("You are not old enough to drive.")
+
+feel = input("\n\nSo, " + fname + ", how are you today?\n")
+
+print("you are " + feel + ".")
+if(feel == "mad" or feel == "sad" or feel == "upset"):
+    print("I'm sorry to hear that")
+else:
+    print("That is good to hear.")
+tell = input("Tell me more.\n")
+if(tell == "mad" or tell == "sad"):
+    print("I'm sorry to hear that")
+elif(tell == "upset"):
+    print(random.choice (["I'm sorry to hear that.", "Do you wanna talk about it?"]))
+else:
+    print(random.choice (["That is good to hear.", "That is nice."]))
+print("Well, " + fname + ", it has been nice chatting with you.")
