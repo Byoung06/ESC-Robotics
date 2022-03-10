@@ -1,0 +1,19 @@
+// C++ code
+//
+int red = 6;
+int potPin = 0;
+int potValue = 0;
+
+void setup() 
+{
+    pinMode(red, OUTPUT);
+  	pinMode(5,OUTPUT);
+    pinMode(potPin, INPUT);
+}
+void loop() 
+{
+        potValue = analogRead(potPin);
+    potValue = map(potValue, 0, 1023, 0, 255);
+    analogWrite(red, potValue);
+    delay(15);
+}
